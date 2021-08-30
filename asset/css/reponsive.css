@@ -1,0 +1,101 @@
+                            /* ------------------tablet va mobile---------------- */
+                            
+                            @media (max-width:1023px) {
+                                .F {
+                                    height: 650px;
+                                }
+                                .H-icon {
+                                    display: none;
+                                }
+                                .H-login {
+                                    display: none;
+                                }
+                                .H-text {
+                                    margin-left: 0;
+                                }
+                                .H-description {
+                                    position: absolute;
+                                    top: 60%;
+                                    left: 50%;
+                                    transform: translateX(-50%);
+                                }
+                            }
+                            /* -------------- mobile------------- */
+                            
+                            @media (max-width:740px) {
+                                .row {
+                                    margin: 0;
+                                }
+                                .F {
+                                    height: 1150px;
+                                }
+                                .H-ND {
+                                    display: flex;
+                                    top: 25%;
+                                }
+                                .H-listt {
+                                    display: none;
+                                }
+                                .H-inputt {
+                                    position: fixed;
+                                    display: block;
+                                    top: 10px;
+                                    width: calc(100% - 140px);
+                                    z-index: 4;
+                                }
+                                .H-input-mobile {
+                                    width: 100%;
+                                }
+                                .C-a-text1 {
+                                    font-size: 30px;
+                                }
+                                .C-a-text2 {
+                                    display: none;
+                                }
+                                .H-img {
+                                    width: 100%;
+                                }
+                                .H-img img {
+                                    height: 500px;
+                                }
+                                .H-description {
+                                    top: 45%;
+                                }
+                                .H-d-text {
+                                    line-height: 2;
+                                }
+                                .C-adventure {
+                                    padding: 0 35px;
+                                }
+                                .M {
+                                    padding: 0 20px;
+                                }
+                                .H-P-infor-img {
+                                    padding: 0 30px;
+                                }
+                                .H-P-infor-text {
+                                    display: flex;
+                                    justify-content: center;
+                                }
+                                .FM {
+                                    padding-left: 40px;
+                                    padding-right: 0;
+                                }
+                                .H-P-infor-text1 {
+                                    padding: 10px;
+                                }
+                                .C-addinfor-text button {
+                                    width: 110px;
+                                    height: 30px;
+                                    margin-top: 20px;
+                                }
+                                .H-textlink {
+                                    padding: 0 6px;
+                                }
+                                .icon-moblie {
+                                    display: block;
+                                }
+                                .list-mobile {
+                                    display: block;
+                                }
+                            }

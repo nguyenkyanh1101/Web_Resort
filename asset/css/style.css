@@ -1,0 +1,604 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --While-color: #fff;
+    --black-color: #000;
+    --text-color: #333;
+    --border-color: #dbdbdb;
+    --backgoundcolor: #dbdbdb;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+/* ------------------------------------- header ---------------------------------------- */
+
+.header-top {
+    height: 70px;
+    background-color: bisque;
+}
+
+.header-content {
+    width: 100%;
+    position: relative;
+}
+
+.H-ND {
+    width: 100%;
+    position: absolute;
+    display: flex;
+    top: 50px;
+    justify-content: space-around;
+}
+
+.H-img img {
+    background-attachment: fixed;
+    width: 100%;
+    height: auto;
+    background-repeat: no-repeat;
+}
+
+.H-listt {
+    position: absolute;
+    display: flex;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--While-color);
+    height: 66px;
+    border-radius: 40px;
+    width: 700px;
+    box-shadow: 0 0 20px rgb(78, 77, 77);
+}
+
+.H-lable {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    width: 60px;
+    height: 60px;
+    align-items: center;
+    background-color: rgb(224, 90, 90);
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+}
+
+#H-lableicon {
+    font-size: 20px;
+    color: white;
+    display: flex;
+    width: 60px;
+    justify-content: center;
+}
+
+.H-description {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.H-d-text {
+    font-size: 20px;
+    line-height: 60px;
+}
+
+.H-d-btn:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.H-d-btn {
+    width: 260px;
+    height: 65px;
+    background-color: white;
+    border: none;
+    border-radius: 35px;
+}
+
+
+/* -------------------Thẻ H-textlist đầu tiên trong 4 thẻ */
+
+.H-textList:first-child::after {
+    display: none;
+}
+
+.H-textList::after {
+    content: "";
+    position: absolute;
+    height: 50%;
+    /* border: 1px solid #ccc; */
+    width: 1px;
+    background-color: grey;
+    display: block;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 0;
+}
+
+.H-textList:hover {
+    opacity: 0.6;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.H-textList {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 30px;
+    position: relative;
+}
+
+.H-T-place {
+    font-weight: 600;
+}
+
+.H-T-text {
+    font-size: 15px;
+    color: grey;
+}
+
+
+/* ---------------------Header Text----------------------------------- */
+
+.H-text {
+    display: flex;
+    align-items: center;
+    margin-left: 150px;
+}
+
+.H-textlist {
+    display: flex;
+    list-style: none;
+}
+
+.H-textlink:hover {
+    opacity: 0.4;
+}
+
+.H-textlink {
+    text-decoration: none;
+    color: white;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+/* ------------------------ Header-login0-------------------------- */
+
+.H-login {
+    display: flex;
+    align-items: center;
+    width: 300px;
+    justify-content: space-around;
+    position: relative;
+}
+
+
+/*--------------------------------------Hover có tác dụng vs thẻ con của nó--------------------------------------*/
+
+.H-loginicon:hover .H-login_list {
+    display: block;
+}
+
+
+/* after dùng cho thẻ cha có 1 tk con after cuối cùng*/
+
+.H-loginicon::after {
+    content: "";
+    position: absolute;
+    width: 100px;
+    height: 10px;
+    bottom: -10px;
+}
+
+.H-loginicon {
+    color: gray;
+    width: 77px;
+    height: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    border-radius: 10px;
+    cursor: pointer;
+    border: none;
+}
+
+.H-loginicon svg {
+    font-size: 20px;
+}
+
+.H-loginicon1 {
+    font-size: 25px;
+}
+
+.H-logintext {
+    color: white;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+
+/* -----------------------------List login------------------------------------------------ */
+
+.H-login_list {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: white;
+    width: 240px;
+    height: 240px;
+    display: none;
+    list-style: none;
+    border-radius: 10px;
+    animation: Showlist ease 0.6s;
+}
+
+@keyframes Showlist {
+    from {
+        opacity: 0;
+        scale: 0;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.H-login--item:first-child::before {
+    display: none;
+}
+
+.H-login--item::before {
+    content: "";
+    position: absolute;
+    border-top: 1px solid rgb(238, 230, 230);
+    top: 0;
+    left: 16px;
+    right: 16px;
+}
+
+.H-login--item {
+    padding-left: 20px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    position: relative;
+}
+
+
+/* .H-login--item:first-child .H-login--linkk {
+    color: red
+} */
+
+.H-login--linkk:hover {
+    font-weight: bold;
+    color: red;
+}
+
+.H-login--linkk {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+/* -----------------------------------------------content---------------------------------- */
+
+.C-adventure {
+    margin: 40px 0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.C-img {
+    height: 100%;
+    border-radius: 5px;
+}
+
+.C-des {
+    position: absolute;
+    left: 80px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    /*  cách căn giữa */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.C-des1:hover {
+    color: indianred;
+}
+
+.C-des1 {
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.C-des2 {
+    color: grey;
+}
+
+.content-place1 {
+    position: relative;
+    height: 65px;
+    margin: 10px 0;
+}
+
+
+/* ------------------------conten infor---------------------------- */
+
+.H-P-infor {
+    text-decoration: none;
+}
+
+.H-P-infor-text {
+    font-size: 18px;
+    color: var(--text-color);
+    margin: 10px 0;
+    font-weight: 700;
+}
+
+.a {
+    line-height: 40px;
+}
+
+.H-P-infor-text1 {
+    font-size: 15px;
+    color: grey;
+}
+
+.H-P-infor-img:hover {
+    transform: translateY(3px);
+    opacity: 0.8;
+}
+
+.H-P-infor-img {
+    border-radius: 10px;
+    width: 100%;
+}
+
+
+/* -------------------------content add infor------------------------ */
+
+.C-addinfor {
+    margin-top: 100px;
+    position: relative;
+}
+
+.C-a-img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+.C-addinfor-text {
+    position: absolute;
+    top: 20%;
+    left: 10%;
+}
+
+.C-addinfor-text button {
+    width: 155px;
+    height: 48px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.C-a-text1 {
+    display: block;
+    font-size: 48px;
+    color: var(--While-color);
+}
+
+.C-a-text2 {
+    width: 60%;
+    display: block;
+    font-size: 18px;
+    color: var(--While-color);
+    margin: 50px 0;
+}
+
+
+/* ------------------footer-------------------- */
+
+.footer {
+    border-top: 1px solid #ccc;
+    margin-top: 100px;
+}
+
+.footer-top {
+    margin-top: 50px;
+    list-style: none;
+}
+
+.F1 {
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.footer-link:hover {
+    color: coral;
+}
+
+.footer-link {
+    text-decoration: none;
+    color: var(--text-color);
+    margin-top: 16px;
+    display: block;
+    font-size: 15px;
+}
+
+.F {
+    border-bottom: 1px solid #ccc;
+    height: 350px;
+}
+
+.FFF {
+    display: flex;
+    justify-content: space-between;
+}
+
+.F-text {
+    margin: 25px 0;
+}
+
+.F-icon {
+    margin: 25px 0;
+}
+
+
+/* -----------------Thẻ input--------------------- */
+
+.H-input {
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: block;
+}
+
+.H-inputt {
+    position: absolute;
+    top: 105%;
+    left: 50%;
+    transform: translateX(-50%);
+    display: none;
+}
+
+.H-input-mobile {
+    display: block;
+    width: 600px;
+    height: 60px;
+    border-radius: 40px;
+    padding: 0 10px;
+    outline: none;
+}
+
+.H-input1 {
+    display: block;
+    width: 600px;
+    height: 60px;
+    border-radius: 40px;
+    padding: 0 10px;
+    outline: none;
+}
+
+@keyframes hiendan {
+    from {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.F-textlink:hover {
+    color: black;
+}
+
+.F-textlink1 {
+    color: black;
+}
+
+.F-textlink {
+    text-decoration: none;
+    color: grey;
+    padding: 0 10px;
+}
+
+.icon-moblie {
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    position: fixed;
+    display: none;
+    cursor: pointer;
+}
+
+.icon-moblie1 {
+    font-size: 30px;
+    color: wheat;
+    display: block;
+    height: 30px;
+    width: 30px;
+}
+
+.list-mobile {
+    top: 0;
+    right: 0;
+    background-color: white;
+    width: 100%;
+    height: 300px;
+    position: fixed;
+    border-radius: 5px;
+    z-index: 5;
+    transform: translateY(-100%);
+    display: none;
+}
+
+.list-mobile1 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    list-style: none;
+}
+
+.item-mobile {
+    width: 100%;
+}
+
+.link-moblie:hover {
+    color: coral;
+    font-size: 20px;
+}
+
+.link-moblie {
+    text-decoration: none;
+    color: black;
+}
+
+.mobile_close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.mobile_close1:hover {
+    cursor: pointer;
+    font-size: 25px;
+    color: coral;
+}
+
+.mobile_close1 {
+    font-size: 20px;
+    width: 30px;
+    height: 30px;
+}
+
+
+/* -------------------- xi ly su kien-------------------- */
+
+.moblie-check {
+    display: none;
+}
+
+.moblie-check:checked~.list-mobile {
+    transform: translateY(0);
+}
